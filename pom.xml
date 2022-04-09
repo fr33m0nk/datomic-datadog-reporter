@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.clojars.fr33m0nk</groupId>
   <artifactId>datomic-datadog-reporter</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>1.0.1</version>
   <name>fr33m0nk/datomic-datadog-reporter</name>
-  <description>FIXME: my new library.</description>
+  <description>A library for datomic that sends metrics to datadog .</description>
   <url>https://github.com/fr33m0nk/datomic-datadog-reporter</url>
   <licenses>
     <license>
@@ -15,7 +15,7 @@
   </licenses>
   <developers>
     <developer>
-      <name>Prashantsinha</name>
+      <name>Prashant Sinha</name>
     </developer>
   </developers>
   <scm>

@@ -1,24 +1,25 @@
 (ns fr33m0nk.datomic-datadog-reporter
   (:require
-    [com.unbounce.dogstatsd.core :as dd]
+    [clj-statsd :as s]
+    [camel-snake-kebab.core :as csk]
     [environ.core :as e]))
 
-(defn create-datadog-config
+
+(defn datadog-client-config
   []
   {:host (or (e/env :datadog-host) "127.0.0.1")
-   :port (-> (e/env :datadog-port) (or 8125) long)
-   :prefix (or (e/env :datadog-prefix) "datomic")
-   :once? true})
+   :port (-> (e/env :datadog-port) (or 8125) int)
+   :prefix (-> (or (e/env :datadog-prefix) "datomic") (str "."))})
 
-(defn send-metrics
-  [metrics]
-  (let [dd-config (create-datadog-config)]
-    (dd/setup! dd-config)
-    (doseq [[metric-type metric-value] metrics]
-      (if (map? metric-value)
-        (doseq [[sub-metric-name sub-metric-value] metric-value]
-          (dd/gauge (str (name metric-type) "." (name sub-metric-name)) sub-metric-value))
-        (dd/gauge (name metric-type) metric-value)))
-    (.addShutdownHook
-      (Runtime/getRuntime)
-      (Thread. ^Runnable dd/shutdown!))))
+
+(let [{:keys [host port prefix]} (datadog-client-config)]
+  (s/setup host port :prefix prefix))
+
+
+(defn send-metrics [metrics]
+  (doseq [[metric value] metrics]
+    (let [metric-name (csk/->kebab-case-string metric)]
+      (if (map? value)
+        (doseq [[sub-metric sub-metric-value] value]
+          (s/gauge (str metric-name "-" (csk/->kebab-case-string sub-metric)) sub-metric-value))
+        (s/gauge (str metric-name) value)))))

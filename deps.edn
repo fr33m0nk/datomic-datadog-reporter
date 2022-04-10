@@ -1,6 +1,7 @@
 {:paths ["src" "resources"]
  :deps {environ/environ {:mvn/version "1.2.0"}
-        com.unbounce/clojure-dogstatsd-client {:mvn/version "0.7.0"}}
+        camel-snake-kebab/camel-snake-kebab {:mvn/version "0.4.2"}
+        clj-statsd/clj-statsd {:mvn/version "0.4.0"}}
  :aliases
  {:test
   {:extra-paths ["test"]

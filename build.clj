@@ -4,7 +4,7 @@
             [org.corfield.build :as bb]))
 
 (def lib 'net.clojars.fr33m0nk/datomic-datadog-reporter)
-(def version "1.0.1")
+(def version "1.1.5")
 #_ ; alternatively, use MAJOR.MINOR.COMMITS:
 (def version (format "1.0.%s" (b/git-count-revs nil)))
 
@@ -16,7 +16,7 @@
       (assoc :lib lib :version version)
       (bb/run-tests)
       (bb/clean)
-      (bb/jar)))
+      (bb/uber)))
 
 (defn install "Install the JAR locally." [opts]
   (-> opts

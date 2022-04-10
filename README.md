@@ -2,13 +2,15 @@
 
 A tiny clojure library that reports datomic metrics to statsd. This is heavily inspired by [Appcanary](https://github.com/appcanary) 's [datomic-statsd-reporter](https://github.com/appcanary/datomic-statsd-reporter) and [Tom Crayford](https://github.com/tcrayford) 's [datomic-riemann-reporter](https://github.com/yeller/datomic-riemann-reporter/).
 
+[![Clojars Project](https://img.shields.io/clojars/v/net.clojars.fr33m0nk/datomic-datadog-reporter.svg)](https://clojars.org/net.clojars.fr33m0nk/datomic-datadog-reporter)
+
 ## Installation
 
 Download from https://github.com/fr33m0nk/datomic-datadog-reporter
 
 ## Usage
 
-Drop an uberjar in $DATOMIC_DIR/lib, then add below to your transactor's `properties` file:
+Drop an [uberjar](https://repo.clojars.org/net/clojars/fr33m0nk/datomic-datadog-reporter/1.1.5/datomic-datadog-reporter-1.1.5.jar) in $DATOMIC_DIR/lib, then add below to your transactor's `properties` file:
 
 ```ini
 metrics-callback=fr33m0nk.datomic-datadog-reporter/send-metrics

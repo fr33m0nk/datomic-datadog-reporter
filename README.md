@@ -2,11 +2,12 @@
 
 A tiny clojure library that reports datomic metrics to statsd. This is heavily inspired by [Appcanary](https://github.com/appcanary) 's [datomic-statsd-reporter](https://github.com/appcanary/datomic-statsd-reporter) and [Tom Crayford](https://github.com/tcrayford) 's [datomic-riemann-reporter](https://github.com/yeller/datomic-riemann-reporter/).
 
-[![Clojars Project](https://img.shields.io/clojars/v/net.clojars.fr33m0nk/datomic-datadog-reporter.svg)](https://clojars.org/net.clojars.fr33m0nk/datomic-datadog-reporter)
-
 ## Installation
 
-Download from https://github.com/fr33m0nk/datomic-datadog-reporter
+Download uberjar from Clojars
+
+[![Clojars Project](https://img.shields.io/clojars/v/net.clojars.fr33m0nk/datomic-datadog-reporter.svg)](https://clojars.org/net.clojars.fr33m0nk/datomic-datadog-reporter)
+-- [Direct Link](https://repo.clojars.org/net/clojars/fr33m0nk/datomic-datadog-reporter) to download jars
 
 ## Usage
 

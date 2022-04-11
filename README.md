@@ -21,9 +21,9 @@ metrics-callback=fr33m0nk.datomic-datadog-reporter/send-metrics
 
 - you need to set these three environment variables:
 
-- DATADOG_HOST=your_datadog_agent_host (default: `127.0.0.1`)
-- DATADOG_PORT=your_datadog_agent_port (default: `8125`)
-- DATADOG_PREFIX=your_datadog_metric-prefix (default: `datomic`)
+-- DATADOG_HOST=your_datadog_agent_host (default: `127.0.0.1`)
+-- DATADOG_PORT=your_datadog_agent_port (default: `8125`)
+-- DATADOG_PREFIX=your_datadog_metric-prefix (default: `datomic`)
 
 - Start/restart your transactor, and you'll see events showing up in DataDog.
 - All events will start with prefix "datomic".

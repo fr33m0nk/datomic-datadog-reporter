@@ -19,7 +19,7 @@ Download uberjar from Clojars
 metrics-callback=fr33m0nk.datomic-datadog-reporter/send-metrics
 ```
 
-- you need to set these two environment variables:
+- you need to set these three environment variables:
 
 - DATADOG_HOST=your_datadog_agent_host (default: `127.0.0.1`)
 - DATADOG_PORT=your_datadog_agent_port (default: `8125`)

@@ -26,7 +26,7 @@ Download uberjar from Clojars
     - DATADOG_PREFIX=your_datadog_metric-prefix (default: `datomic`)
 
 4. Start/restart your transactor, and you'll see events showing up in DataDog.
-5. All events will start with prefix "datomic".
+5. All events will start with prefix provided (default `datomic.`.
 6. Event names come from the metrics available [here](http://docs.datomic.com/monitoring.html).
 
 ## License

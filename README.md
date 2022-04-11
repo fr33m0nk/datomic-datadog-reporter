@@ -8,7 +8,7 @@ Download uberjar from Clojars
 
 [![Clojars Project](https://img.shields.io/clojars/v/net.clojars.fr33m0nk/datomic-datadog-reporter.svg)](https://clojars.org/net.clojars.fr33m0nk/datomic-datadog-reporter)
 
-- [Direct Link](https://repo.clojars.org/net/clojars/fr33m0nk/datomic-datadog-reporter) to download jars
+- [Direct Link](https://repo.clojars.org/net/clojars/fr33m0nk/datomic-datadog-reporter/) to download jars
 
 ## Usage
 

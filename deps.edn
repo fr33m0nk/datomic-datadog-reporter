@@ -1,7 +1,10 @@
 {:paths ["src" "resources"]
- :deps {environ/environ {:mvn/version "1.2.0"}
-        camel-snake-kebab/camel-snake-kebab {:mvn/version "0.4.2"}
-        clj-statsd/clj-statsd {:mvn/version "0.4.0"}}
+ :deps {environ/environ {:mvn/version "1.2.0"
+                         :exclusions [org.clojure/clojure]}
+        camel-snake-kebab/camel-snake-kebab {:mvn/version "0.4.3"
+                                             :exclusions [org.clojure/clojure]}
+        clj-statsd/clj-statsd {:mvn/version "0.4.2"
+                               :exclusions [org.clojure/clojure]}}
  :aliases
  {:test
   {:extra-paths ["test"]

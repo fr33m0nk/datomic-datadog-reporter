@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.clojars.fr33m0nk</groupId>
   <artifactId>datomic-datadog-reporter</artifactId>
-  <version>1.1.5</version>
+  <version>1.1.6</version>
   <name>fr33m0nk/datomic-datadog-reporter</name>
   <description>A library for datomic that sends metrics to datadog .</description>
   <url>https://github.com/fr33m0nk/datomic-datadog-reporter</url>

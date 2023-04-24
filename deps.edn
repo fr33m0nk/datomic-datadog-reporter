@@ -1,4 +1,4 @@
-{:paths ["src" "resources"]
+{:paths ["src"]
  :deps {environ/environ {:mvn/version "1.2.0"
                          :exclusions [org.clojure/clojure]}
         camel-snake-kebab/camel-snake-kebab {:mvn/version "0.4.3"
@@ -11,6 +11,6 @@
    :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}
                 io.github.cognitect-labs/test-runner
                 {:git/tag "v0.5.0" :git/sha "48c3c67"}}}
-  :build {:deps {io.github.seancorfield/build-clj
-                 {:git/tag "v0.6.6" :git/sha "171d5f1"}}
+  :build {:replace-deps {io.github.seancorfield/build-clj
+                         {:git/tag "v0.6.6" :git/sha "171d5f1"}}
           :ns-default build}}}
